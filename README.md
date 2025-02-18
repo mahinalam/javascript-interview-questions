@@ -113,3 +113,47 @@ You can also link in to the HTML file, like in this example:
 <script type="text/javascript" src="YourJavaScriptFile.js"></script>
 </head>
 ```
+
+### 4. How do you add comments to JavaScript?
+
+You can add either line comments or block comments to JavaScript.
+
+// This is a line comment. It must stay on one line.
+
+/* This is a
+
+block comment. It can
+
+span as many lines as you’d like.*/
+
+### 5. Are there still local and global variables?
+
+In modern JavaScript, the designations of global and local variables have become more exact. By definition, a global variable can be accessed from anywhere within the program and have “global scope” or global visibility within the program. Local variables are temporary variables that only have a scope within the function that generated them and have “local scope.”
+
+// How to declare a local variable
+
+In older versions of JavaScript, you declared a variable using the keyword “var”. In modern JavaScript, “var” has been replaced with the keyword “let”. Because of this, the distinction between global and local variables becomes more sharply defined. You declare a variable using “let”: 
+
+let myFirstName = “John”;
+
+If a variable is not within a function, an if block, or a loop, the variable is global in scope. 
+
+### 6. Is JavaScript a case-sensitive language?
+
+Yes, JavaScript is a case-sensitive language. When you name a variable, you must use the exact case to access that variable again. For that reason, like most case-sensitive languages, it is standard practice to use camelback notion where everything is in lowercase except mid-word capitalization. For example:
+
+let   myFirstName = “Mary”;
+
+### 7. What is the difference between Java and JavaScript?
+
+Java is an object-oriented, compiled programming language designed to run in the Java Virtual Machine. JavaScript is an object-oriented, interpreted scripting language designed to run in the browser or JavaScript engines like NodeJS.
+
+### 8. What is the difference between null and undefined in JavaScript?
+
+A variable is undefined when you declare it without an assigned value, like below:
+
+var x;
+
+Null actually has to be assigned to a variable:
+
+var x = null;
