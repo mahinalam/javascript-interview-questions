@@ -89,5 +89,27 @@ var obj1 = {
 
 // Collection of data as an ordered list
 var array1 = [5, "Hello", true, 4.1];
+```
 
+### 2.What is JavaScript?
+Javascript is a powerful, object-oriented, interpreted programming language that adds dynamic capabilities to HTML pages. All the popular web browsers use it as a scripting language. It also is used in the backend to create services in platforms like NodeJS.
 
+### 3. How do you add JavaScript to a web page?
+
+You can embed JavaScript directly into a web page using script tags, like the example below:
+
+```js
+<head>
+<title>Your Page Title</title>
+<script language="JavaScript" type="text/javascript">
+[Your JavaScript code here]
+</script>
+</head>
+```
+You can also link in to the HTML file, like in this example:
+```js
+<head>
+<title>Your Page Title</title>
+<script type="text/javascript" src="YourJavaScriptFile.js"></script>
+</head>
+```
