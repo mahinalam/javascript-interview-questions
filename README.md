@@ -157,3 +157,53 @@ var x;
 Null actually has to be assigned to a variable:
 
 var x = null;
+
+### 9.  What does this mean in JavaScript?
+
+The this keyword in JavaScript references the object in which the function is operating.
+
+### 10. How do you create an object in JavaScript?
+
+In modern JavaScript, there are several ways to create an object. You can even use, like Java, the keyword “new”. However, in the background, JavaScript uses an object notation called JSON, which stands for JavaScript Object Notation. At its simplest. you can create an object in JavaScript by using JSON as follows:
+
+```js
+var customer = {
+    name: "John Doe",
+    age: 32
+};
+```
+
+### 11.  How do you create an array in JavaScript?
+```js
+var emptyArray = [];
+var populatedArray = ['a', 'b', 'c', 'd', 'e'];
+```
+
+### 12. How many types of functions are there in JavaScript?
+
+There are two types. A function in JavaScript is a named function when it’s assigned a name on creation using the function keyword. A function is an anonymous function when it’s not given a name on creation.
+
+
+### 13. What is the difference between var, const, and let?
+
+“let” has become the way to declare a variable. The keyword “const” declares a variable whose value will not change. However, you might still come across applications that use “var” in legacy code. Here are the three possibilities, but, again, there are almost no reasons to use “var” any longer: 
+
+* var – Variables defined with this keyword process before the execution of the JavaScript.
+* let – You can reassign variables defined with this keyword. They also can only be used in the block they are defined in.
+* const – You cannot reassign variables defined with this keyword. The keyword stands for constant
+
+### 14. What is the difference between == and ===?
+
+The double equal sign == checks for equality. The triple equal sign === checks for both equality and type.
+
+
+### 15. What are the different boolean operators in JavaScript?
+
+The difference is as follows: 
+* && is the “and” operator
+* || is the “or” operator
+* ! is the “not” operator
+
+### 16. What does the isNaN() function do?
+
+The isNaN() function determines whether a value is not a number or an illegal number. If the argument is not a number, the isNaN() function will return true. A variable can also return NaN (Not a Number) if it needs to evaluate an expression that should return a number but fails to do so. 
