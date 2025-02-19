@@ -207,3 +207,20 @@ The difference is as follows:
 ### 16. What does the isNaN() function do?
 
 The isNaN() function determines whether a value is not a number or an illegal number. If the argument is not a number, the isNaN() function will return true. A variable can also return NaN (Not a Number) if it needs to evaluate an expression that should return a number but fails to do so. 
+
+### 17. What kind of looping functions does JavaScript support?
+
+JavaScript supports three types of looping functions:
+
+* For loops
+* While loops
+* Do-while loops
+
+### 18. What kind of conditional statements does JavaScript support?
+
+These are the conditional statements supported by JavaScript:
+
+* If
+* If-else
+* If-else if-else
+* Switch
