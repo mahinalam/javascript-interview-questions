@@ -224,3 +224,292 @@ These are the conditional statements supported by JavaScript:
 * If-else
 * If-else if-else
 * Switch
+
+
+### 19. What is the HTML DOM?
+
+Once a web page loads, browser generates something called a DOM, or Document Object Model, of the page. The DOM acts as a programming interface for HTML, which defines HTML properties, events, and methods. It also refers to HTML elements as objects.
+
+JavaScript relies on this DOM to alter the elements and attributes of a page and create the dynamic websites it’s known for.
+The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure, and style of documents.
+
+
+### 20. How do timers work in JavaScript?
+
+With a timer, coders can set their code to execute at specific times, either once or at repeat intervals. There are three functions involved to set a timer in JavaScript:
+
+* setTimeout(function, milliseconds): This creates a timer that will call a function after a designated amount of milliseconds. This also generates an id value so the coder can access it at another time.
+
+// Create a button that, upon clicking, executes the exampleTimer function.
+<button onclick="exampleTimer()">Click here!</button>
+// Define the exampleTimer function to create an alert box 2000 milliseconds after clicking.
+<script>
+function exampleTimer()
+{
+setTimeout(function(){alert("You did it!")},2000);
+}
+</script>
+
+
+* setInterval(function, milliseconds): This acts the same way as the setTimer function, only it repeats itself based on the number of milliseconds given.
+
+  // Create a button that, upon clicking, executes the example Interval function.
+<button onclick="exampleInterval()">Click here!</button>
+// The exampleInterval function will continue to create
+// a new alert box 2000 milliseconds after one is closed.
+<script>
+function exampleInterval()
+{
+setInterval(function(){alert("You did it! Again!")},2000);
+}
+</script>
+
+* clearInterval(id): Used to stop a timer.
+
+
+### 21. How do you remove an attribute from a JavaScript object?
+
+Using the delete method will remove an attribute from an object.
+
+```js
+var customer = { name: 'Tom Waits', age: 85}
+delete customer.age
+// customer will now be { name: 'Tom Waits' }
+```
+
+
+### 22. What type of pop-ups does JavaScript support?
+
+There are three types:
+
+* Alert
+* Confirm
+* Prompt
+
+### 23. How can you force another page to load in JavaScript?
+
+By setting the location.href value, as shown here:
+
+location.href=”http://google.com”;
+
+
+### 24. What are escape characters?
+
+In JavaScript, the backslash is an escape character. Escape characters allow you to use a special character inside a set of the same special character that wraps it. For example, when you want to use a double quote inside another set of double quotes, like so:
+
+var x = “Bob yelled \”Get out of here!\””;
+
+Without the escape characters in the line above, there would be a syntax error. With them, console logging the variable above will result in this:
+
+Bob yelled “Get out of here!”
+
+### 25. What are JavaScript cookies?
+
+Cookies are small data files stored by a browser. Websites set them to store information about you. An example would be the cookie set when you choose “Remember Me” when logging into a website. The site will store a cookie in your browser as a token to identify you without requiring you to log in again.
+
+### 26. How do you add an element to an array in JavaScript?
+
+var a = [1,2];
+a.push(3);
+// a now is [1,2,3];
+
+
+### 27. How do you remove an element from a JavaScript Array?
+
+There are two ways to do this, depending on whether you want to remove an element from the beginning or the end of the array. Pop removes an element from the end and shift removes an element from the beginning. Both methods return the element that they removed:
+
+```js
+var a = [1,2,3];
+var ele1 = a.pop();
+// a will now equal [1,2] and ele1 will equal 3.
+var b = [1,2,3];
+var ele2 = b.shift();
+// b will now equal [2,3] and ele2 will equal 1.
+```
+
+
+### 28.  What is a callback?
+
+A callback is a function that executes after another function has finished executing. It’s passed to the function as a parameter. Callbacks are necessary because JavaScript is an event-based language that can execute code asynchronously. Callback functions ensure that function calls occur in a specific order.
+
+
+### 29. What are closures?
+Closures form when you define a variable outside the current scope and access it from some inner scope. A simple way to use a closure is to define a JavaScript function inside of another JavaScript function.
+
+### 30. What does a break statement do?
+Break statements stop the execution of a loop in JavaScript.
+
+
+### 31. What does a continue statement do?
+Continue statements continue the next statement in a JavaScript loop.
+
+### 32. How do you create a generic object in JavaScript?
+You can create a new, empty JavaScript object using the object class.
+
+var x = new object();
+
+### 33. How do you find the type of a JavaScript object in code?
+
+You do this using the typeof operator.
+
+console.log(typeof 42);
+
+// Will output “number”
+
+### 34. How do you handle exceptions in JavaScript?
+
+You can handle runtime exceptions by using the try, catch, and finally statements. Run the code you want to test in the try block, and if a runtime error occurs, it will execute the code designated in the catch block. The code in the finally block executes whether or not there is an error.
+
+```js
+Try{
+    // Code you are executing
+}
+Catch(error){
+    // Code to throw an exception
+}
+Finally{
+    // Code that runs after either success or failure
+}
+```
+
+### 35. What is the difference between Local storage and Session storage?
+
+Local storage is stored locally in the browser without contacting the server with each change to the stored data. It persists between sessions unless it’s manually cleared. Session storage is like local storage, but it’s cleared when the browser is closed.
+
+### 36. What are some JavaScript frontend frameworks and what to they do?
+
+A JavaScript frontend framework is a set of JavaScript libraries that define a workflow and structure to a JavaScript web application. Here are some popular frontend frameworks:
+* Angular
+* React
+* Vue
+
+
+### 37. What is the difference between window and document in JavaScript?
+
+The JavaScript window object is a global object that comprises variables, functions, history, location, and other attributes. The JavaScript document object is a property of the window object.
+
+### 38. What is event bubbling?
+
+Event bubbling transfers events contained within the child node to the parent node. It’s a beneficial method because of its speediness, as it only requires the code to traverse the DOM tree one time.
+
+### 39. What is the difference between window.onload and onDocumentReady?
+
+The window.onload event won’t trigger until every single element on the page has been fully loaded, including images and CSS. The downside to this is it might take a while before any code actually executes. You can use onDocumentReady to execute code as soon as the DOM is loaded instead.
+
+### 40. What is the blur method used for?
+The blur method removes focus from an element in HTML.
+
+### 41. How do you convert any base of a number to an integer in JavaScript?
+First, you must represent the number in the non-decimal as a string. Then use the parseInt method to convert it to an integer. The first parameter is your non-decimal number, and the second is the base of the number.
+
+```js
+// convert the hexadecimal value of FF
+parseInt("FF", 16);
+// returns 255
+```
+
+### 42. What are exports and imports?
+
+Imports and exports allow developers to write modular JavaScript. Using these methods, a developer can break up a JavaScript project into multiple files.
+
+
+### 43.  What are the different types of errors in JavaScript?
+* EvalError
+* RangeError
+* ReferenceError
+* SyntaxError
+* TypeError
+* URIError
+* AggregateError
+* InternalError
+
+
+### 44. What is the difference between call and apply?
+These methods work similarly. The call method will call a function with a given this value and separately-provided arguments:
+theFunction.call(valueForThis, arg1, arg2, …)
+
+The apply method does the same, but you must supply the arguments as an array:
+
+theFunction.apply(valueForThis, arrayOfArgs)
+The JavaScript errors are:
+
+
+### 45. What is the unshift method?
+
+var a = [2,3];
+a.unshift(1);
+// a will now be [1,2,3]
+
+
+### 46. How do you assign properties to an object in JavaScript?
+You can assign a property to a JavaScript object in two ways:
+
+var a = {};
+// using array syntax
+a['firstName'] = 'John';
+// the standard way
+a.lastName = 'Doe';
+// a will now be {firstName: "John", lastName: "Doe"}
+
+
+### 47. What is strict mode in JavaScript and how can it you enable it?
+
+Strict mode runs a restricted variety of JavaScript that limits the syntax you can use and turns some hidden errors into thrown errors. It can also provide more performance. You can enable it by adding the string literal “use strict” above the file:
+
+“use strict”;
+
+var a = ‘hi’;
+
+### 48. How can you detect the operating system of the client machine with JavaScript?
+
+Calling navigator.appVersion will return the operating system in JavaScript.
+
+
+### 48. Explain Hoisting in javascript.
+
+Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top.
+This means that irrespective of where the variables and functions are declared, they are moved on top of the scope. The scope can be both local and global.
+
+Example 1:
+
+```js
+hoistedVariable = 3;
+console.log(hoistedVariable); // outputs 3 even when the variable is declared after it is initialized	
+var hoistedVariable;
+```
+
+Example 2:
+
+```js
+hoistedFunction();  // Outputs " Hello world! " even when the function is declared after calling
+
+function hoistedFunction(){ 
+  console.log(" Hello world! ");
+} 
+```
+
+Example 3:
+```js
+// Hoisting takes place in the local scope as well
+function doSomething(){
+  x = 33;
+  console.log(x);
+  var x;
+} 
+```
+
+                         Note - Variable initializations are not hoisted, only variable declarations are hoisted:
+
+```js
+var x;
+console.log(x); // Outputs "undefined" since the initialization of "x" is not hoisted
+x = 23;
+```
+
+
+                       Note - To avoid hoisting, you can run javascript in strict mode by using “use strict” on top of the code:
+```js
+"use strict";
+x = 23; // Gives an error since 'x' is not declared
+var x;
+```
