@@ -513,3 +513,114 @@ x = 23;
 x = 23; // Gives an error since 'x' is not declared
 var x;
 ```
+
+### 49. Why do we use the word “debugger” in javascript?
+
+The debugger for the browser must be activated in order to debug the code. Built-in debuggers may be switched on and off, requiring the user to report faults. The remaining section of the code should stop execution before moving on to the next line while debugging.
+
+
+### 50.  Difference between “ == “ and “ === “ operators.
+
+Both are comparison operators. The difference between both the operators is that “==” is used to compare values whereas, “ === “ is used to compare both values and types.
+
+Example
+
+```js
+var x = 2;
+var y = "2";
+(x == y)  // Returns true since the value of both x and y is the same
+(x === y) // Returns false since the typeof x is "number" and typeof y is "string"
+
+```
+
+### 51. What is NaN property in JavaScript?
+
+NaN property represents the “Not-a-Number” value. It indicates a value that is not a legal number.
+
+typeof of NaN will return a Number.
+
+To check if a value is NaN, we use the isNaN() function,
+
+                                               Note- isNaN() function converts the given value to a Number type, and then equates to NaN.
+
+```js
+isNaN("Hello")  // Returns true
+isNaN(345)   // Returns false
+isNaN('1')  // Returns false, since '1' is converted to Number type which results in 0 ( a number) 
+isNaN(true) // Returns false, since true converted to Number type results in 1 ( a number)
+isNaN(false) // Returns false
+isNaN(undefined) // Returns true
+```
+
+### 52. What is an Immediately Invoked Function in JavaScript?
+
+An Immediately Invoked Function ( known as IIFE and pronounced as IIFY) is a function that runs as soon as it is defined.
+
+Syntax of IIFE :
+
+```js
+(function(){ 
+  // Do something;
+})();
+```
+
+To understand IIFE, we need to understand the two sets of parentheses that are added while creating an IIFE :
+
+The first set of parenthesis:
+
+```js
+(function (){
+   //Do something;
+})
+```
+
+While executing javascript code, whenever the compiler sees the word “function”, it assumes that we are declaring a function in the code. Therefore, if we do not use the first set of parentheses, the compiler throws an error because it thinks we are declaring a function, and by the syntax of declaring a function, a function should always have a name.
+
+```js
+function() {
+  //Do something;
+}
+// Compiler gives an error since the syntax of declaring a function is wrong in the code above.
+```
+
+To remove this error, we add the first set of parenthesis that tells the compiler that the function is not a function declaration, instead, it’s a function expression.
+
+The second set of parenthesis:
+
+(function (){
+  //Do something;
+})();
+
+From the definition of an IIFE, we know that our code should run as soon as it is defined. A function runs only when it is invoked. If we do not invoke the function, the function declaration is returned:
+
+
+### 53. Explain Higher Order Functions in javascript.
+
+Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+
+Higher-order functions are a result of functions being first-class citizens in javascript.
+
+Examples of higher-order functions:
+
+```js
+function higherOrder(fn) {
+  fn();
+}
+   
+higherOrder(function() { console.log("Hello world") });  
+```
+
+```js
+function higherOrder2() {
+  return function() {
+    return "Do something";
+  }
+}      
+var x = higherOrder2();
+x()   // Returns "Do something"
+```
+
+### 54. Explain “this” keyword.
+
+The “this” keyword refers to the object that the function is a property of.
+The value of the “this” keyword will always depend on the object that is invoking the function.\
